@@ -10,8 +10,10 @@ source:
   sha256: ea36959b1421fc8e72caa222f30ec3234d0ed95990e2bf28943a85f33eadad2d
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
+  run_exports:
+    - {{ pin_subpackage("libgsf", max_pin="x.x") }}
 
 requirements:
   build:
