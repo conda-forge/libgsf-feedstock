@@ -40,7 +40,7 @@ test:
 
 about:
   home: https://github.com/GNOME/libgsf
-  license: GPL-2.0
+  license: GPL-2.0-only
   license_family: GPL
   license_file: COPYING
   summary: An extensible I/O abstraction library for dealing with structured file formats
