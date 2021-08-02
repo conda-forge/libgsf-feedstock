@@ -20,6 +20,7 @@ requirements:
     - perl
     - perl-xml-parser
     - pkg-config
+    - gnuconfig  # [unix]
     - {{ compiler('c') }}
   host:
     - glib
