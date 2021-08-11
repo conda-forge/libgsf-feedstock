@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://ftp.gnome.org/pub/GNOME/sources/{{ name }}/1.14/{{ name }}-{{ version }}.tar.xz
+  url: https://ftp.gnome.org/pub/GNOME/sources/{{ name }}/{{ ".".join(version.split(".")[:2]) }}/{{ name }}-{{ version }}.tar.xz
   sha256: d188ebd3787b5375a8fd38ee6f761a2007de5e98fa0cf5623f271daa67ba774d
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("libgsf", max_pin="x.x") }}
 
 requirements:
   build:
-    - perl
+    - perl *
     - perl-xml-parser
     - pkg-config
     - gnuconfig  # [unix]
