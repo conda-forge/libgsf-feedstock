@@ -18,15 +18,11 @@ libxml2:
 - '2.9'
 pcre:
 - '8'
-perl:
-- 5.26.2
 pin_run_as_build:
   bzip2:
     max_pin: x
   libxml2:
     max_pin: x.x
-  perl:
-    max_pin: x.x.x
   zlib:
     max_pin: x.x
 target_platform:
