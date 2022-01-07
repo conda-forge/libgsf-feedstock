@@ -21,6 +21,7 @@ requirements:
     - perl-xml-parser
     - pkg-config
     - gnuconfig  # [unix]
+    - make  # [unix]
     - {{ compiler('c') }}
   host:
     - glib
