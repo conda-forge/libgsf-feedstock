@@ -19,7 +19,7 @@ docker_image:
 glib:
 - '2'
 libxml2:
-- '2.11'
+- '2.12'
 pcre:
 - '8'
 target_platform:
