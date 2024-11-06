@@ -1,5 +1,5 @@
 {% set name = "libgsf" %}
-{% set version = "1.14.51" %}
+{% set version = "1.14.53" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://ftp.gnome.org/pub/GNOME/sources/{{ name }}/{{ ".".join(version.split(".")[:2]) }}/{{ name }}-{{ version }}.tar.xz
-  sha256: f0b83251f98b0fd5592b11895910cc0e19f798110b389aba7da1cb7c474017f5
+  sha256: 0eb59a86e0c50f97ac9cfe4d8cc1969f623f2ae8c5296f2414571ff0a9e8bcba
   patches:
     # https://github.com/GNOME/libgsf/commit/0d0cc90e667faafa70481ac1f79c4068093910e3
     - libxml2212.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("libgsf", max_pin="x.x") }}
@@ -26,6 +26,7 @@ requirements:
     - gnuconfig  # [unix]
     - make  # [unix]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - glib
     - libxml2
