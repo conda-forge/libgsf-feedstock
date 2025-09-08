@@ -8,9 +8,6 @@ package:
 source:
   url: https://ftp.gnome.org/pub/GNOME/sources/{{ name }}/{{ ".".join(version.split(".")[:2]) }}/{{ name }}-{{ version }}.tar.xz
   sha256: 0eb59a86e0c50f97ac9cfe4d8cc1969f623f2ae8c5296f2414571ff0a9e8bcba
-  patches:
-    # https://github.com/GNOME/libgsf/commit/0d0cc90e667faafa70481ac1f79c4068093910e3
-    - libxml2212.patch
 
 build:
   number: 0
