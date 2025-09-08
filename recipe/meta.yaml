@@ -30,11 +30,6 @@ requirements:
     - zlib
     - bzip2
     - pcre
-  run:
-    - glib
-    - libxml2
-    - zlib
-    - bzip2
 
 test:
   commands:
