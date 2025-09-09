@@ -3,11 +3,13 @@ About libgsf-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libgsf-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/GNOME/libgsf
+Home: https://gitlab.gnome.org/GNOME/libgsf
 
 Package license: GPL-2.0-only
 
 Summary: An extensible I/O abstraction library for dealing with structured file formats
+
+Development: https://gitlab.gnome.org/GNOME/libgsf
 
 Current build status
 ====================
