@@ -1,16 +1,16 @@
-{% set name = "libgsf" %}
 {% set version = "1.14.53" %}
+{% set version_majmin = ".".join(version.split(".")[:2]) %}
 
 package:
-  name: {{ name|lower }}
+  name: libgsf
   version: {{ version }}
 
 source:
-  url: https://ftp.gnome.org/pub/GNOME/sources/{{ name }}/{{ ".".join(version.split(".")[:2]) }}/{{ name }}-{{ version }}.tar.xz
+  url: https://ftp.gnome.org/pub/GNOME/sources/libgsf/{{ version_majmin }}/libgsf-{{ version }}.tar.xz
   sha256: 0eb59a86e0c50f97ac9cfe4d8cc1969f623f2ae8c5296f2414571ff0a9e8bcba
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("libgsf", max_pin="x.x") }}
@@ -26,7 +26,7 @@ requirements:
     - {{ stdlib("c") }}
   host:
     - glib
-    - libxml2
+    - libxml2-devel
     - zlib
     - bzip2
     - pcre
@@ -37,11 +37,12 @@ test:
     - gsf --version
 
 about:
-  home: https://github.com/GNOME/libgsf
+  home: https://gitlab.gnome.org/GNOME/libgsf
   license: GPL-2.0-only
   license_family: GPL
   license_file: COPYING
   summary: An extensible I/O abstraction library for dealing with structured file formats
+  dev_url: https://gitlab.gnome.org/GNOME/libgsf
 
 extra:
   recipe-maintainers:
