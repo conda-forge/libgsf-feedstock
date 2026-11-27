@@ -1,4 +1,4 @@
-{% set version = "1.14.60" %}
+{% set version = "1.14.61" %}
 {% set version_majmin = ".".join(version.split(".")[:2]) %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://ftp.gnome.org/pub/GNOME/sources/libgsf/{{ version_majmin }}/libgsf-{{ version }}.tar.xz
-  sha256: 83e12c36a099a8a7019bf425e2c24af66eeb2ef5874251e694431a07d9805dae
+  sha256: 59698b8fdf3db2dae03bb492826168dd9073ff762ccc11e980306aabe97087aa
 
 build:
   number: 0
